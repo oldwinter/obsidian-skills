@@ -4,6 +4,7 @@
     "name": "Steph Ango",
     "url": "https://stephango.com/"
   },
+  "description": "Obsidian skills with Chinese runtime guidance for Markdown, Bases, Canvas, CLI, and Defuddle workflows.",
   "plugins": [
     {
       "name": "obsidian",
