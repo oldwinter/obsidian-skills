@@ -6,13 +6,13 @@
 
 - 上游项目：`kepano/obsidian-skills`
 - 中文 fork：`oldwinter/obsidian-skills`
-- 当前同步上游 commit：`a1dc48e68138490d522c04cbf5822214c6eb1202`
+- 当前同步上游 commit：`8ccef29ae8624eccc734e77ced4a6e54baf5d83a`
 - 主要安装面：Claude Code/Codex plugin marketplace、skills CLI、直接 clone
-- 中文 runtime 入口：5 个 `skills/*/SKILL.md`
+- 中文 runtime 入口：6 个 `skills/*/SKILL.md`
 
 ## 中文化目标
 
-让中文用户可以直接使用 Obsidian Flavored Markdown、Bases、JSON Canvas、Obsidian CLI 和 Defuddle skill。wikilink、embed、callout、property、filter、formula、CLI 参数、JSON Canvas schema、URL 和文件扩展名保持原样；每个 runtime 入口的中文导读与英文正文共同生效。
+让中文用户可以直接使用 Obsidian Flavored Markdown、Bases、JSON Canvas、Obsidian CLI、Defuddle 和 Knap skill。wikilink、embed、callout、property、filter、formula、CLI 参数、JSON Canvas schema、URL 和文件扩展名保持原样；每个 runtime 入口的中文导读与技术正文共同生效。
 
 ## 安装与交付
 
