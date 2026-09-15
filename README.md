@@ -1,21 +1,10 @@
 Agent Skills for use with Obsidian.
 
-## 中文版安装（oldwinter fork）
-
 这是上游 `kepano/obsidian-skills` 的中文化 fork。安装后，Claude Code、Codex 或兼容 skills 的 Agent 会读取 `skills/*/SKILL.md` 中的中文执行导读和 Obsidian 技术正文。
 
-```text
-/plugin marketplace add oldwinter/obsidian-skills
-/plugin install obsidian@obsidian-skills
-```
-
-或：
-
-```bash
-npx skills add oldwinter/obsidian-skills --full-depth
-```
-
 These skills follow the [Agent Skills specification](https://agentskills.io/specification) so they can be used by any skills-compatible agent, including Claude Code, Codex, and Open Code.
+
+Skill 在 `skills/` 子目录。`npx skills add` 必须带 `--full-depth`，否则只会装到仓库根，Agent 读不到 `SKILL.md`。
 
 ## Installation
 
@@ -28,14 +17,20 @@ These skills follow the [Agent Skills specification](https://agentskills.io/spec
 
 ### npx skills
 
-```
-npx skills add git@github.com:oldwinter/obsidian-skills.git
+```bash
+npx skills add oldwinter/obsidian-skills --full-depth
 ```
 
-Instead of ssh, if you prefer to use https:
+SSH:
 
+```bash
+npx skills add git@github.com:oldwinter/obsidian-skills.git --full-depth
 ```
-npx skills add https://github.com/oldwinter/obsidian-skills
+
+HTTPS:
+
+```bash
+npx skills add https://github.com/oldwinter/obsidian-skills --full-depth
 ```
 
 ### Manually
