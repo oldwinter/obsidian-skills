@@ -76,7 +76,7 @@ Nodes are objects placed on the canvas. Array order determines z-index: first no
 | `y` | Yes | integer | Y position in pixels |
 | `width` | Yes | integer | Width in pixels |
 | `height` | Yes | integer | Height in pixels |
-| `color` | No | canvasColor | Preset `"1"`-`"6"` or hex (e.g., `"#FF0000"`) |
+| `color` | No | canvasColor | Preset `"1"`-`"6"` (preferred) or a brand hex |
 
 ### Text Nodes
 
@@ -188,18 +188,18 @@ Edges connect nodes via `fromNode` and `toNode` IDs.
 
 ## Colors
 
-The `canvasColor` type accepts either a hex string or a preset number:
+Prefer preset `"1"`–`"6"`. These follow the Obsidian theme, so neighboring nodes stay visually consistent. Use a hex string only for a brand color that must stay fixed across themes.
 
-| Preset | Color |
-|--------|-------|
-| `"1"` | Red |
-| `"2"` | Orange |
-| `"3"` | Yellow |
-| `"4"` | Green |
-| `"5"` | Cyan |
-| `"6"` | Purple |
+| Preset | Color | Obsidian default |
+|--------|-------|------------------|
+| `"1"` | Red | `#fb464c` |
+| `"2"` | Orange | `#e9973f` |
+| `"3"` | Yellow | `#e0de71` |
+| `"4"` | Green | `#44cf6e` |
+| `"5"` | Cyan | `#53dfdd` |
+| `"6"` | Purple | `#a882ff` |
 
-Preset color values are intentionally undefined -- applications use their own brand colors.
+Do not invent a nearby red when you mean preset `"1"` — a raw hex block will not match themed neighbors.
 
 ## ID Generation
 
@@ -235,7 +235,7 @@ After creating or editing a canvas file, verify:
 4. `type` is one of: `text`, `file`, `link`, `group`
 5. `fromSide`/`toSide` values are one of: `top`, `right`, `bottom`, `left`
 6. `fromEnd`/`toEnd` values are one of: `none`, `arrow`
-7. Color presets are `"1"` through `"6"` or valid hex (e.g., `"#FF0000"`)
+7. Color presets are `"1"` through `"6"`; hex only for a fixed brand color
 8. JSON is valid and parseable
 
 If validation fails, check for duplicate IDs, dangling edge references, or malformed JSON strings (especially unescaped newlines in text content).
