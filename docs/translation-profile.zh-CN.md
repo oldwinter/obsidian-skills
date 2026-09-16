@@ -8,7 +8,7 @@
 - 中文 fork：`oldwinter/obsidian-skills`
 - 当前同步上游 commit：`8ccef29ae8624eccc734e77ced4a6e54baf5d83a`
 - 主要安装面：Claude Code/Codex plugin marketplace、skills CLI、直接 clone
-- 中文 runtime 入口：`skills/*/SKILL.md`（当前 6 个：markdown、bases、json-canvas、cli、defuddle、knap）
+- 中文 runtime 入口：`skills/*/SKILL.md`（当前 6 个：obsidian-markdown、obsidian-bases、json-canvas、obsidian-cli、defuddle、knap）
 
 ## 中文化目标
 
@@ -34,5 +34,6 @@ npx skills add oldwinter/obsidian-skills --full-depth
 - `git diff --check`
 - `rg -n '^(<<<<<<<|=======|>>>>>>>)$' .`
 - Claude marketplace/plugin JSON 校验：每个 `skills/<name>/` 必须出现在 `plugin.json` 与 `marketplace.json` 的 description 或 keywords
+- 翻译档案与 README 的 skill 名单、数量必须与 `skills/` 目录一致，不要再写过时的固定个数
 - `python3 -m unittest discover -s tests -p 'test_*.py' -v`
 - 全部 runtime skill 的 frontmatter、内部 references 和 schema 示例保持可解析
