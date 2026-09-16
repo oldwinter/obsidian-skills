@@ -1,7 +1,7 @@
 {
   "name": "obsidian",
-  "version": "1.0.1",
-  "description": "Create and edit Obsidian vault files including Markdown, Bases, and Canvas. Use when working with .md, .base, or .canvas files in an Obsidian vault.",
+  "version": "1.0.2",
+  "description": "Create and edit Obsidian vault files with obsidian-markdown, obsidian-bases, json-canvas, obsidian-cli, defuddle, and knap. Use when working with .md, .base, or .canvas files, the Obsidian CLI, web clipping, or template rendering.",
   "author": {
     "name": "Steph Ango",
     "url": "https://stephango.com/"
@@ -14,6 +14,12 @@
     "bases",
     "canvas",
     "pkm",
-    "notes"
+    "notes",
+    "obsidian-markdown",
+    "obsidian-bases",
+    "json-canvas",
+    "obsidian-cli",
+    "defuddle",
+    "knap"
   ]
 }
