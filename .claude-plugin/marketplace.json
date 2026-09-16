@@ -4,13 +4,13 @@
     "name": "Steph Ango",
     "url": "https://stephango.com/"
   },
-  "description": "Obsidian skills with Chinese runtime guidance for Markdown, Bases, Canvas, CLI, and Defuddle workflows.",
+  "description": "Obsidian skills with Chinese runtime guidance for obsidian-markdown, obsidian-bases, json-canvas, obsidian-cli, defuddle, and knap workflows.",
   "plugins": [
     {
       "name": "obsidian",
       "source": "./",
-      "description": "Claude Skills for Obsidian",
-      "version": "1.0.1"
+      "description": "Create and edit Obsidian vault files with obsidian-markdown, obsidian-bases, json-canvas, obsidian-cli, defuddle, and knap.",
+      "version": "1.0.2"
     }
   ]
 }
