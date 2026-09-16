@@ -80,8 +80,8 @@ knap validate template.md
 先将网页提取为包含 Markdown 内容的 JSON，再渲染成笔记：
 
 ```bash
-defuddle parse https://example.com/article --md --json \
-  | knap render template.md --data - -o note.md
+defuddle parse https://example.com/article --markdown --json \
+  | knap render template.md --data - --output note.md
 ```
 
 Defuddle 的 JSON properties（例如 `title` 和 `content`）会直接成为模板变量。
