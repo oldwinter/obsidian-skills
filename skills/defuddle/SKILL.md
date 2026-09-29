@@ -1,13 +1,13 @@
 ---
 name: defuddle
-description: Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page. Do NOT use for URLs ending in .md — those are already markdown, use WebFetch directly. When saving a clipped page as an Obsidian note, use --markdown --frontmatter.
+description: Extract clean Markdown from HTML pages with Defuddle CLI.
 ---
 
 # Defuddle
 
 ## 中文执行导读
 
-这是 `defuddle` 的中文 runtime 入口。
+这是 `defuddle` 的中文 runtime 入口。使用 Defuddle CLI 从 HTML 页面提取干净的 Markdown。
 
 中文 Obsidian 请求命中本 skill 时，先确认文件类型和目标操作，再按下方上游流程执行。输出说明使用简体中文；wikilink、embed、callout、property、filter、formula、CLI 参数、schema、路径、URL 和代码保持原样。剪藏成笔记时用 `--markdown --frontmatter`，不要只输出裸 HTML。
 

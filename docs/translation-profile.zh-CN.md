@@ -6,7 +6,7 @@
 
 - 上游项目：`kepano/obsidian-skills`
 - 中文 fork：`oldwinter/obsidian-skills`
-- 当前同步上游 commit：`8ccef29ae8624eccc734e77ced4a6e54baf5d83a`
+- 当前同步上游 commit：`3ccff5338ea700537839b21900aa5358a0402c98`
 - 主要安装面：Claude Code/Codex plugin marketplace、skills CLI、直接 clone
 - 中文 runtime 入口：`skills/*/SKILL.md`（当前 6 个：obsidian-markdown、obsidian-bases、json-canvas、obsidian-cli、defuddle、knap）
 
