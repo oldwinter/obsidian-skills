@@ -30,7 +30,7 @@ A canvas file (`.canvas`) contains two top-level arrays following the [JSON Canv
 ### 1. Create a New Canvas
 
 1. Create a `.canvas` file with the base structure `{"nodes": [], "edges": []}`
-2. Generate unique 16-character hex IDs for each node (e.g., `"6f0ad84f44ce9c17"`)
+2. Generate an ID string that is unique across all nodes and edges
 3. Add nodes with required fields: `id`, `type`, `x`, `y`, `width`, `height`
 4. Add edges referencing valid node IDs via `fromNode` and `toNode`
 5. **Validate**: Parse the JSON to confirm it is valid. Verify all `fromNode`/`toNode` values exist in the nodes array
@@ -70,7 +70,7 @@ Nodes are objects placed on the canvas. Array order determines z-index: first no
 
 | Attribute | Required | Type | Description |
 |-----------|----------|------|-------------|
-| `id` | Yes | string | Unique 16-char hex identifier |
+| `id` | Yes | string | Unique string identifier |
 | `type` | Yes | string | `text`, `file`, `link`, or `group` |
 | `x` | Yes | integer | X position in pixels |
 | `y` | Yes | integer | Y position in pixels |
@@ -203,7 +203,7 @@ Do not invent a nearby red when you mean preset `"1"` — a raw hex block will n
 
 ## ID Generation
 
-Generate 16-character lowercase hexadecimal strings (64-bit random value):
+The JSON Canvas specification accepts any unique string. A 16-character lowercase hexadecimal value is a convenient option, but it is not required:
 
 ```
 "6f0ad84f44ce9c17"
