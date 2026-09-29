@@ -37,11 +37,18 @@ npx skills add https://github.com/oldwinter/obsidian-skills --full-depth
 
 #### Claude Code
 
-Add the contents of this repo to a `/.claude` folder in the root of your Obsidian vault (or whichever folder you're using with Claude Code). See more in the [official Claude Skills documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
+Copy the contents of `skills/` into `<vault>/.claude/skills/`. The resulting layout is `<vault>/.claude/skills/<skill-name>/SKILL.md`. See more in the [official Claude Skills documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
 #### Codex
 
-Copy the `skills/` directory into your Codex skills path (typically `~/.codex/skills`). See the [Agent Skills specification](https://agentskills.io/specification) for the standard skill format.
+Copy the contents of `skills/` into the Codex skills path:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R skills/. ~/.codex/skills/
+```
+
+The resulting layout is `~/.codex/skills/<skill-name>/SKILL.md`. See the [Agent Skills specification](https://agentskills.io/specification) for the standard skill format.
 
 #### OpenCode
 

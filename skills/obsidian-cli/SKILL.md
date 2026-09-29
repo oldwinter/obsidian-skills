@@ -1,6 +1,7 @@
 ---
 name: obsidian-cli
 description: Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.
+compatibility: Requires the Obsidian 1.12.7 or later installer with Command line interface enabled.
 ---
 
 # Obsidian CLI
@@ -11,7 +12,7 @@ description: Interact with Obsidian vaults using the Obsidian CLI to read, creat
 
 中文 Obsidian 请求命中本 skill 时，先确认文件类型和目标操作，再按下方上游流程执行。输出说明使用简体中文；wikilink、embed、callout、property、filter、formula、CLI 参数、schema、路径、URL 和代码保持原样。
 
-Use the `obsidian` CLI to interact with a running Obsidian instance. Requires Obsidian to be open.
+Use the `obsidian` CLI to interact with an Obsidian vault. Install Obsidian 1.12.7 or later, then enable **Command line interface** in **Settings > General**. If the app is not running, the first CLI command launches Obsidian.
 
 ## Command reference
 
@@ -28,7 +29,7 @@ obsidian create name="My Note" content="Hello world"
 **Flags** are boolean switches with no value:
 
 ```bash
-obsidian create name="My Note" silent overwrite
+obsidian create name="My Note" open overwrite
 ```
 
 For multiline content use `\n` for newline and `\t` for tab.
@@ -42,7 +43,7 @@ Many commands accept `file` or `path` to target a file. Without either, the acti
 
 ## Vault targeting
 
-Commands target the most recently focused vault by default. Use `vault=<name>` as the first parameter to target a specific vault:
+If the current working directory is inside a vault, commands target that vault. Otherwise, commands target the active vault. Use `vault=<name>` or `vault=<id>` as the first parameter to select a vault explicitly:
 
 ```bash
 obsidian vault="My Vault" search query="test"
@@ -52,7 +53,7 @@ obsidian vault="My Vault" search query="test"
 
 ```bash
 obsidian read file="My Note"
-obsidian create name="New Note" content="# Hello" template="Template" silent
+obsidian create name="New Note" content="# Hello" template="Template"
 obsidian append file="My Note" content="New line"
 obsidian search query="search term" limit=10
 obsidian daily:read
@@ -63,7 +64,7 @@ obsidian tags sort=count counts
 obsidian backlinks file="My Note"
 ```
 
-Use `--copy` on any command to copy output to clipboard. Use `silent` to prevent files from opening. Use `total` on list commands to get a count.
+Use `--copy` on any command to copy output to clipboard. A created file stays closed unless the command includes `open` or `newtab`. Use `total` on list commands to get a count.
 
 ## Plugin development
 
